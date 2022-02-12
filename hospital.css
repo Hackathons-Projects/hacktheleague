@@ -1,0 +1,155 @@
+
+
+
+.header img{
+    width: 10rem;
+    margin-top: 23px;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(56, 51, 51, 0.644);
+    position:fixed;
+    top: 0;
+    z-index: 100;
+}
+
+nav img{
+    width: 150px;
+    margin-top: 23px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align:center ;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px ;
+
+}
+
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.nav-links ul li:hover ::after{
+    width: 100%;
+}
+
+
+.volunteer{
+    /* background: #1870a36e; */
+    font-family: sans-serif;
+}
+
+.volunt{
+    position: relative;
+    width: 450px;
+    margin: 30px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.1);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.2);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.hospital{
+    display: flex;
+}
+
+iframe{
+    margin: 30px;
+    width: 60%;
+}
+
+.vol{
+    display: flex;
+    padding-top: 15px;
+    background: rgba(255, 255, 255, 0.274);
+    padding: 10px 20px;
+    color:rgb(209, 10, 10);
+    margin: 5px 0;
+    transition: .5s;
+
+}
+
+.vol:nth-child(1){
+    background: rgba(68, 108, 219, 0.9);
+}
+
+.vol:nth-child(2){
+    background: rgba(68, 108, 219, 0.6);
+}
+.vol:nth-child(3){
+    background: rgba(68, 108, 219, 0.4);
+}
+.vol span:nth-child(1){
+    width: 30px;
+}
+.vol span:nth-child(2){
+    width: 200px;
+}
+.vol span:nth-child(3){
+    width: 100px;
+    font-size: 15x;
+}
+.vol span:nth-child(4){
+    width: 70px;
+
+}
+
+.vol:hover{
+    transform: scale(1.06);
+    background: #FFB6C1;
+}
+
+.title-head{
+    height: 35vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.13),rgba(4, 9, 30, 0.164)),url(assets\images\locationpg.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #7B0202;
+}
+
+.content{
+    background: white;
+    height: 100px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.title{
+    font-size: 60px;
+    margin-top: 60px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 0 1rem gainsboro;
+}
