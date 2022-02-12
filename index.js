@@ -29,7 +29,7 @@ app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/public/login.html");
 });
 
-app.get("/success", (req, res) => {
+app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/public/hospital.html");
 });
 

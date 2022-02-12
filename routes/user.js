@@ -11,7 +11,7 @@ router.get("/", (req, res) =>{
 });
 router.post("/add", (req, res) => {
     User.findOne({
-        email: req.body.identifier
+        userId: req.body.identifier
     },function(err, user){
         if(err){
             res.send(JSON.stringify({msg: "Authentication Failed"}))
