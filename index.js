@@ -6,7 +6,6 @@ const path = require("path");
 
 /**Routes Import */
 const userRoute = require("./routes/user");
-// const authRoute = require("./routes/auth");
 
 const app = express();
 dotenv.config();
@@ -19,7 +18,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 /** Routes */
 app.use("/user", userRoute);
-//app.use("/auth", authRoute);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");

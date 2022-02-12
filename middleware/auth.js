@@ -4,8 +4,6 @@ const verifyToken = async (req, res, next) => {
   try {
     const { token, userid } = req.headers;
 
-    console.log(req.headers);
-
     if (!token || !userid)
       return res
         .status(401)
