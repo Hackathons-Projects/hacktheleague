@@ -2,6 +2,7 @@ const axios = require("axios");
 
 const verifyToken = async (req, res, next) => {
   try {
+    console.log(req.headers
     const { token, userid } = req.headers;
 
     if (!token || !userid)

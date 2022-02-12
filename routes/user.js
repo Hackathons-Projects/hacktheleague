@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
   res.send("User Route");
 });
 
-router.post("/store", authMiddleWare, storeUser);
+router.post("/store", storeUser);
 router.put("/update", authMiddleWare, updateUser);
 router.delete("/delete", authMiddleWare, deleteUser);
 router.put("/update/lastdonation", authMiddleWare, updateUserLastDonationDate);

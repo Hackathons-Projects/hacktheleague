@@ -31,28 +31,24 @@
         // can be one of 'email' or 'phone_number_sms'
         identifierType: "phone_number_sms",
         // Add the API key copied from 2nd step
-        apiKey: "00086d35-0c71-41bc-936e-6f8051d3c562",
+        apiKey: "a9be9045-3231-41ba-bb18-2d4a691627e2",
         // Add a callback here to handle the payload sent by sdk
         onSuccess: (payload) => {
           // Storing the payload in sessionStorage
           sessionStorage.setItem("payload", JSON.stringify(payload));
           // Creating a XHR object
           let xhr = new XMLHttpRequest();
-          let url = "/user/add"
+          let url = "/user/store"
           // open a connection
           xhr.open("POST", url, true);
           // Set the request header i.e. which type of content you are sending
           xhr.setRequestHeader("Content-Type", "application/json");
           // Create a state change callback
           xhr.onreadystatechange = function () {
+		console.log(xhr.status)
+		  console.log(xhr.response)
               if (xhr.readyState === 4 && xhr.status === 200) {
-                var message = JSON.parse(xhr.response);
-                if(message.msg=="existing"){
-                  window.location.href = "/success";
-                }
-                else{
-                  window.location.href="/details";
-                }
+              	window.location.href = "/home";
               }
           };
           // Converting JSON data to string

@@ -31,10 +31,6 @@ app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/public/hospital.html");
 });
 
-app.get("/details", (req, res) => {
-  res.sendFile(__dirname + "/public/details.html");
-});
-
 mongoose
   .connect(process.env.MongoURL, {})
   .then(() =>

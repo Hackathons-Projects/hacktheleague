@@ -2,17 +2,17 @@ const User = require("../model/User");
 
 const storeUser = async (req, res) => {
   try {
-    const { phone } = req.body;
+    const phone = req.body.identifier;
 
     if (!phone)
       return res
         .status(401)
         .json({ message: "User phone Number Not provided" });
 
-    const user = await User.findOne({ userId: req.userId });
+    const user = await User.findOne({ userId: req.body.user_id });
 
     if (!user) {
-      const newUser = new User({ userId: req.userId, phone: phone });
+      const newUser = new User({ userId: req.body.user_id, phone: phone });
       const savedUser = await newUser.save();
       return res.status(200).json(savedUser);
     }
