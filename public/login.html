@@ -37,8 +37,29 @@
         onSuccess: (payload) => {
           // Storing the payload in sessionStorage
           sessionStorage.setItem("payload", JSON.stringify(payload));
-          // Redirecting to "/success"
-          window.location.href = "/success";
+          // Creating a XHR object
+          let xhr = new XMLHttpRequest();
+          let url = "/user/add"
+          // open a connection
+          xhr.open("POST", url, true);
+          // Set the request header i.e. which type of content you are sending
+          xhr.setRequestHeader("Content-Type", "application/json");
+          // Create a state change callback
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                var message = JSON.parse(xhr.response);
+                if(message.msg=="existing"){
+                  window.location.href = "/success";
+                }
+                else{
+                  window.location.href="/details";
+                }
+              }
+          };
+          // Converting JSON data to string
+          var data = JSON.stringify(payload);
+          // Sending data with the request
+          xhr.send(data);
         },
       };
       var sawo = new Sawo(config);

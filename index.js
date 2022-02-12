@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 /** Routes */
 app.use("/user", userRoute);
-// app.use("/auth", authRoute);
+//app.use("/auth", authRoute);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -30,7 +30,11 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/success", (req, res) => {
-  res.sendFile(__dirname + "/public/success.html");
+  res.sendFile(__dirname + "/public/hospital.html");
+});
+
+app.get("/details", (req, res) => {
+  res.sendFile(__dirname + "/public/details.html");
 });
 
 mongoose
