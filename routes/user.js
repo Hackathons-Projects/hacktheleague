@@ -27,5 +27,9 @@ router.post("/add", (req, res) => {
 router.put("/:id", authMiddleWare, updateUser);
 router.delete("/:id", authMiddleWare, deleteUser);
 router.get("/find/:id", authMiddleWare, getUser);
+router.get("/verify", authMiddleWare, (req, res) => {
+  res.send("User Verified");
+});
+
 
 module.exports = router;
