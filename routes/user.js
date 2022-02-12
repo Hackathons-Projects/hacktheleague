@@ -6,7 +6,7 @@ const {
   deleteUser,
   storeUser,
   updateUserLastDonationDate,
-  findUsers
+  findUsers,
 } = require("../controller/user");
 
 const router = express.Router();
@@ -19,6 +19,6 @@ router.post("/store", authMiddleWare, storeUser);
 router.put("/update", authMiddleWare, updateUser);
 router.delete("/delete", authMiddleWare, deleteUser);
 router.put("/update/lastdonation", authMiddleWare, updateUserLastDonationDate);
-router.get("/find", authMiddleWare, findUsers)
+router.get("/find", authMiddleWare, findUsers);
 
 module.exports = router;

@@ -1,321 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-    <link href="path/to/font-awesome/css/font-awesome.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <script src="https://use.fontawesome.com/77fcd73202.js"></script>\
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <meta charset="utf-8">
+        <title>BloodMate</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="assets\Styles\animate.min.css" rel="stylesheet">
-    <link href="assets\Styles\flaticon.css" rel="stylesheet">
-    <link href="assets\Styles\owl.carousel.min.css" rel="stylesheet">
-    <link href="assets\Styles\lightbox.min.css" rel="stylesheet">
+        <!-- CSS Libraries -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="assets\Styles\animate.min.css" rel="stylesheet">
+        <link href="assets\Styles\flaticon.css" rel="stylesheet">
+        <link href="assets\Styles\owl.carousel.min.css" rel="stylesheet">
+        <link href="assets\Styles\lightbox.min.css" rel="stylesheet">
 
 
-    <!-- Template Stylesheet -->
-    <link href="assets\Styles\style.css" rel="stylesheet">
-    <link href="assets\Styles\flaticon.css" rel="stylesheet">
-  </head>
-  <body>
-    <!--<header>
-      <div class="container">
-        <nav
-          class="navbar navbar-expand-lg navbar-light primary-menu"
-          style="background-color: #fff"
-        >
-          <a class="navbar-brand" href="#"></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            onclick="onToggle()"
-          ><span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
-      </div>
-    </header> !-->
-    <div class="navbar navbar-expand-lg bg-dark navbar-dark nav-sticky">
-      <div class="container-fluid">
-          <a href="index.html" class="navbar-brand">B<span>lood</span>M<span>ate</span></span></a>
-          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+        <!-- Template Stylesheet -->
+        <link href="assets\Styles\style.css" rel="stylesheet">
+        <link href="assets\Styles\flaticon.css" rel="stylesheet">
 
-          <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-              <div class="navbar-nav ml-auto">
-                  <a href="#" class="nav-item nav-link active">Home</a>
-                  <a href="#About BloodMate" class="nav-item nav-link">About</a>
-                  <a href="#blood chart" class="nav-item nav-link">Blood compatibility chart</a>
-                  <a href="/login" class="btn btn-warning"
-                >Login <i class="fa fa-sign-in" aria-hidden="true"></i
-              ></a>
+    </head>
+    <body>
 
 
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Nav Bar End -->
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark nav-sticky">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">B<span>lood</span>M<span>ate</span></span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="#About BloodMate" class="nav-item nav-link">About</a>
+                        <a href="#blood chart" class="nav-item nav-link">Blood compatibility chart</a>
+                        <a href="/login" class="btn btn-warning" >Login <i class="fa fa-sign-in" aria-hidden="true"></i ></a>
 
 
-  <!-- Hero Start -->
-  <div class="hero">
-      <div class="container-fluid">
-          <div class="row align-items-center">
-              <div class="col-sm-12 col-md-6">
-                  <div class="hero-text">
-                      <h1>BloodMate</h1>
-                      <p>
-                          A platform that aims to raise awareness about the importance of blood donation and provides a way for people to find a blood donor.
-                      </p>
-                      <div class="hero-btn">
-                          <a class="btn" href="index.html">Donate/Receive</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-6 d-none d-md-block">
-                  <div class="hero-image">
-                      <img src="assets\images\img8.jpg" alt="Hero Image">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Hero End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
 
 
-  <!-- About Start -->
-  <div class="about wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" id="About BloodMate">
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-lg-5 col-md-6">
-                  <div class="about-img">
-                      <img src="assets\images\img7.jpg" alt="Image">
-                  </div>
-              </div>
-              <div class="col-lg-7 col-md-6">
-                  <div class="section-header text-left">
-                      <p>About BloodMate</p>
-                      <h2>Welcome to BloodMate</h2>
-                  </div>
-                  <div class="about-text">
-                      <p>
-                          every two seconds of every day, someone needs blood. Since blood cannot be manufactured outside the body and has a limited shelf life, the supply must constantly be replenished by generous blood donors.
-                          A blood donation is truly an altruistic gift that an individual can give to others in need. In only 45-60 minutes, an eligible individual can donate one unit of blood that can be separated into four individual components that could help save multiple lives.
-
-                      </p>
-                      <p>
-                          BloodMate provides an instant free and effective solution to this global problem. Using BloodMate you can find blood donors near you. You can also save lifes by donating blood to people in need.
-                      </p>
-                      <a class="btn" href="single.html">Login now</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- About End -->
+        <!-- Hero Start -->
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-text">
+                            <h1>BloodMate</h1>
+                            <p>
+                                A platform that aims to raise awareness about the importance of blood donation and provides a way for people to find a blood donor.
+                            </p>
+                            <div class="hero-btn">
+                                <a class="btn" href="/">Donate/Receive</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                            <img src="assets\images\img8.jpg" alt="Hero Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
 
 
-  <!-- Service Start -->
-  <div class="service" id="blood chart">
-      <div class="container">
-          <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-              <!-- <p></p> -->
-              <h2>Blood compatibility chart</h2>
-          </div>
-          <div class="row" style="">
-              <div class="" data-wow-delay="0.0s">
-                  <div class="service-item">
-                      <h3>
-                        <table>
-                          <tr>
-                            <th>Recipient Blood Type</th>
-                            <th>Matching Donor Blood Type</th>
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" id="About BloodMate">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="assets\images\img7.jpg" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>About BloodMate</p>
+                            <h2>Welcome to BloodMate</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                every two seconds of every day, someone needs blood. Since blood cannot be manufactured outside the body and has a limited shelf life, the supply must constantly be replenished by generous blood donors.
+                                A blood donation is truly an altruistic gift that an individual can give to others in need. In only 45-60 minutes, an eligible individual can donate one unit of blood that can be separated into four individual components that could help save multiple lives.
 
-                          </tr>
-                          <tr>
-                            <td>A+</td>
-                            <td>A+, A-, O+, O-</td>
+                            </p>
+                            <p>
+                                BloodMate provides an instant free and effective solution to this global problem. Using BloodMate you can find blood donors near you. You can also save lifes by donating blood to people in need.
+                            </p>
+                            <a class="btn" href="/login">Login now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
 
-                          </tr>
-                          <tr>
-                            <td>A-</td>
-                            <td>A-, O-</td>
 
-                          </tr>
+        <!-- Service Start -->
+        <div class="service" id="blood chart">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <!-- <p></p> -->
+                    <h2>Blood compatibility chart</h2>
+                </div>
+                <div class="row" style="">
+                    <div class="" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <h3>
+                              <table>
+                                <tr>
+                                  <th>Recipient Blood Type</th>
+                                  <th>Matching Donor Blood Type</th>
 
-                          <tr>
-                            <td>B+</td>
-                            <td>B+, B-, O+, O-</td>
+                                </tr>
+                                <tr>
+                                  <td>A+</td>
+                                  <td>A+, A-, O+, O-</td>
 
-                          </tr>
+                                </tr>
+                                <tr>
+                                  <td>A-</td>
+                                  <td>A-, O-</td>
 
-                          <tr>
-                            <td>B-</td>
-                            <td>B-, O-</td>
+                                </tr>
 
-                          </tr>
+                                <tr>
+                                  <td>B+</td>
+                                  <td>B+, B-, O+, O-</td>
 
-                          <tr>
-                            <td>AB+</td>
-                            <td>Compatible with all blood types</td>
+                                </tr>
 
-                          </tr>
+                                <tr>
+                                  <td>B-</td>
+                                  <td>B-, O-</td>
 
-                          <tr>
-                            <td>AB-</td>
-                            <td>AB-, A-, B-, O-</td>
+                                </tr>
 
-                          </tr>
+                                <tr>
+                                  <td>AB+</td>
+                                  <td>Compatible with all blood types</td>
 
-                          <tr>
-                            <td>O+</td>
-                            <td>O+, O-</td>
+                                </tr>
 
-                          </tr>
+                                <tr>
+                                  <td>AB-</td>
+                                  <td>AB-, A-, B-, O-</td>
 
-                          <tr>
-                            <td>O-</td>
-                            <td>O-</td>
+                                </tr>
 
-                          </tr>
-                        </table>
-                      </h3>
-                  </div>
-              </div>
+                                <tr>
+                                  <td>O+</td>
+                                  <td>O+, O-</td>
 
-              <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                  <div class="service-item">
-                      <div class="service-icon">
-                          <i class="far fa-clock"></i>
-                      </div>
-                      <h3>
-                          <a href="https://alertwhale94.qoom.space/MentliCo/pomodoro.html">Pomodoro Timer</a>
-                      </h3>
-                      <p>
-                          It is not healthy for your mind to work for 24 hours straight. Using the Pomodoro Timer feature you can implement small breaks into your work. This will increase your productivity and decrease the stress and frustration you have on a daily basis.
-                      </p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                  <div class="service-item">
-                      <div class="service-icon">
-                          <i class="far fa-comment-dots"></i>
-                      </div>
-                      <h3>
-                          <a href="https://alertwhale94.qoom.space/MentliCo/chatbot.html">Personal Chatbot</a>
-                      </h3>
-                      <p>
-                          Sometimes just talking about your feelings can help you stay in good mental health and deal with times when you feel troubled. You can use the MentliCo's chat bot to just let out all your frustration and feelings. To add on, you can use the chat bot as a friend if you get bored too.
-                      </p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                  <div class="service-item">
-                      <div class="service-icon">
-                          <i class="fas fa-pray"></i>
-                      </div>
-                      <h3>Relaxation for Body </h3>
-                      <p>
-                          Mental health is not only about the mind, it is also about the body. It is crucial for you to occasionally take some time and just relax your whole body. Yoga is a great way of doing this. You can use MentliCo's yoga gallery to try some relaxing yoga poses.
-                      </p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                  <div class="service-item">
-                      <div class="service-icon">
-                          <i class="far fa-newspaper"></i>
-                      </div>
-                      <h3>Suggested Articles</h3>
-                      <p>
-                          MentliCo also caters to reading lovers. You can look at the suggested articles section on the website to find new interesitng articles and learn about new finding on mental health. The mind is a very complex and sophisticated part of our body and there's just so much we can learn:)
-                      </p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
-                  <div class="service-item">
-                      <div class="service-icon">
-                          <i class="fas fa-book"></i>
-                      </div>
-                      <h3>All Info Mental Health</h3>
-                      <p>
-                          If want to learn more about mental health or if you have any questions on it you can use MentliCo's website to develop a better understanding. There are facts, statistics, and so much more you can look at.
-                      </p>
-                  </div>
-              </div> -->
-          </div>
-      </div>
-  </div>
-  <!-- Service End -->
+                                </tr>
+
+                                <tr>
+                                  <td>O-</td>
+                                  <td>O-</td>
+
+                                </tr>
+                              </table>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <h3>
+                                <a href="https://alertwhale94.qoom.space/MentliCo/pomodoro.html">Pomodoro Timer</a>
+                            </h3>
+                            <p>
+                                It is not healthy for your mind to work for 24 hours straight. Using the Pomodoro Timer feature you can implement small breaks into your work. This will increase your productivity and decrease the stress and frustration you have on a daily basis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="far fa-comment-dots"></i>
+                            </div>
+                            <h3>
+                                <a href="https://alertwhale94.qoom.space/MentliCo/chatbot.html">Personal Chatbot</a>
+                            </h3>
+                            <p>
+                                Sometimes just talking about your feelings can help you stay in good mental health and deal with times when you feel troubled. You can use the MentliCo's chat bot to just let out all your frustration and feelings. To add on, you can use the chat bot as a friend if you get bored too.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-pray"></i>
+                            </div>
+                            <h3>Relaxation for Body </h3>
+                            <p>
+                                Mental health is not only about the mind, it is also about the body. It is crucial for you to occasionally take some time and just relax your whole body. Yoga is a great way of doing this. You can use MentliCo's yoga gallery to try some relaxing yoga poses.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="far fa-newspaper"></i>
+                            </div>
+                            <h3>Suggested Articles</h3>
+                            <p>
+                                MentliCo also caters to reading lovers. You can look at the suggested articles section on the website to find new interesitng articles and learn about new finding on mental health. The mind is a very complex and sophisticated part of our body and there's just so much we can learn:)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>All Info Mental Health</h3>
+                            <p>
+                                If want to learn more about mental health or if you have any questions on it you can use MentliCo's website to develop a better understanding. There are facts, statistics, and so much more you can look at.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
 
 
 
 
 
 
- <br>
+       <br>
 
 
 
 
-  <!-- Footer Start -->
-  <div class="footer wow fadeIn" >
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" >
 
-          <div class="container copyright">
-              <div class="row">
-                  <div class="col-md-6">
-                      <p>BloodMate - February 12, 2022 - Hack The League</p>
-                  </div>
-                  <div class="col-md-6">
-                      <p>Designed by team </p>
-                  </div>
-              </div>
-          </div>
-      </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>BloodMate - February 12, 2022 - Hack The League</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed by team </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Footer End -->
+        <!-- Footer End -->
 
-  <a href="index.html" class="back-to-top" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+        <a href="index.html" class="back-to-top" style="display: none;"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="assets\Styles\jquery-3.4.1.min.js"></script>
-  <script src="assets\Styles\bootstrap.bundle.min.js"></script>
-  <script src="assets\Styles\min.js"></script>
-  <script src="assets\Styles\wow.min.js"></script>
-  <script src="assets\Styles\owl.carousel.min.js"></script>
-  <script src="assets\Styles\isotope.pkgd.min.js"></script>
-  <script src="assets\Styles\lightbox.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="assets\Styles\jquery-3.4.1.min.js"></script>
+        <script src="assets\Styles\bootstrap.bundle.min.js"></script>
+        <script src="assets\Styles\min.js"></script>
+        <script src="assets\Styles\wow.min.js"></script>
+        <script src="assets\Styles\owl.carousel.min.js"></script>
+        <script src="assets\Styles\isotope.pkgd.min.js"></script>
+        <script src="assets\Styles\lightbox.min.js"></script>
 
-  <!-- Contact Javascript File -->
-  <script src="assets\Styles\jqBootstrapValidation.min.js"></script>
-  <script src="assets\Styles\contact.js"></script>
+        <!-- Contact Javascript File -->
+        <script src="assets\Styles\jqBootstrapValidation.min.js"></script>
+        <script src="assets\Styles\contact.js"></script>
 
-  <!-- Template Javascript -->
-  <script src="assets\Styles\main.js"></script>
+        <!-- Template Javascript -->
+        <script src="assets\Styles\main.js"></script>
 
 
 <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="file:///home/reeva/Downloads/free-yoga-website-template/index.html"></a><a class="lb-next" href="file:///home/reeva/Downloads/free-yoga-website-template/index.html"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
-    <script>function onToggle() {
-      location.href = "/login";
-    }</script>
-  </body>
-</html>
