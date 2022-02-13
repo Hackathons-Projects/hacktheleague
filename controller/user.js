@@ -26,6 +26,8 @@ const storeUser = async (req, res) => {
 
 /** Update a specific user */
 const updateUser = async (req, res) => {
+  var data = JSON.parse(req.body)
+  console.log(data.userId)
   try {
     const { fullName, email, phone, bloodType, location, address } = req.body;
 
