@@ -33,7 +33,7 @@ const updateUser = async (req, res) => {
       return res.status(401).json({ message: "Required data missing" });
 
     const updateUser = await User.findOneAndUpdate(
-      { userId: req.userId },
+      { userId: req.body.userId },
       {
         fullName: fullName,
         email: email,

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <meta charset="utf-8">
+        <title>BloodMate</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="assets\Styles\animate.min.css" rel="stylesheet">
+        <link href="assets\Styles\flaticon.css" rel="stylesheet">
+        <link href="assets\Styles\owl.carousel.min.css" rel="stylesheet">
+        <link href="assets\Styles\lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Template Stylesheet -->
+        <link href="assets\Styles\style.css" rel="stylesheet">
+        <link href="assets\Styles\flaticon.css" rel="stylesheet">
+        <link href="assets\Styles\profile.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark nav-sticky">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">B<span>lood</span>M<span>ate</span></span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#" class="nav-item nav-link active">Profile</a>
+                        <a href="#About BloodMate" class="nav-item nav-link">Dashboard</a>
+                        <!-- <a href="index.html" class="nav-item nav-link"></a> -->
+                        <a href="index.html" class="btn btn-warning" >LogOut <i class="fa fa-sign-in" aria-hidden="true"></i ></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+
+        <!-- Hero Start -->
+        <div>
+            <div class="container rounded bg-white mt-5 mb-5">
+                <div class="row">
+                    <div class="col-md-3 border-right">
+                        <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span id="bold-name" class="font-weight-bold"></span><span class="text-black-50"></span><span> </span></div>
+                    </div>
+                    <div class="col-md-5 border-right">
+                        <div class="p-3 py-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Profile Settings</h4>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6"><label class="labels">Name</label><input type="text" id="name" class="form-control" placeholder="first name" value=""></div>
+                            
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><label class="labels">Blood Type</label><input type="text" id="blood_group" class="form-control" placeholder="A+, A-, B+, B-, AB+, AB-, O+, O-" value=""></div>
+                                <div class="col-md-6"><label class="labels">Last Donation</label><input type="text" id="last_donation" class="form-control" value="" placeholder="dd/mm/yyyy"></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" id="phone" class="form-control" placeholder="enter phone number" value=""></div>
+                                <div class="col-md-12"><label class="labels">Email ID</label><input type="text" id="email" class="form-control" placeholder="enter email id" value=""></div>
+                                <div class="col-md-12"><label class="labels">Street</label><input type="text" id="street" class="form-control" placeholder="enter street" value=""></div>
+                                <div class="col-md-12"><label class="labels">Locality</label><input type="text" id="locality" class="form-control" placeholder="enter locality" value=""></div>
+                                <div class="col-md-12"><label class="labels">City</label><input type="text" id="city" class="form-control" placeholder="enter city" value=""></div>
+                                <div class="col-md-12"><label class="labels">Country</label><input type="text" id="country" class="form-control" placeholder="enter country" value=""></div>
+                                <div class="col-md-12"><label class="labels">Pin code</label><input type="text" id="pin" class="form-control" placeholder="enter pin code" value=""></div>
+                            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" onClick="updateProfile()">Update Profile</button></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <script>
+            let payload = sessionStorage.getItem("payload");
+            console.log(payload);
+            // Creating a XHR object
+            let xhr = new XMLHttpRequest();
+            let url = "/user/store"
+            // open a connection
+            xhr.open("POST", url, true);
+            // Set the request header i.e. which type of content you are sending
+            xhr.setRequestHeader("Content-Type", "application/json");
+            // Create a state change callback
+            xhr.onreadystatechange = function () {
+            console.log(xhr.status)
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.response);
+                    document.getElementById("name").value = response.fullName || ""
+                    document.getElementById("bold-name").value = response.fullName
+                    document.getElementById("email").value = response.email || ""
+                    document.getElementById("phone").value = response.phone
+                    document.getElementById("blood_group").value = response.bloodType || ""
+                    document.getElementById("last_donation").value = response.lastDonationDate
+                    document.getElementById("street").value = response.address.street
+                    document.getElementById("locality").value = response.address.locality
+                    document.getElementById("city").value = response.address.city
+                    document.getElementById("country").value = response.address.country
+                    document.getElementById("pin").value = response.pincode
+                }
+            };
+            // Converting JSON data to string
+            var data = JSON.stringify(payload);
+            // Sending data with the request
+            xhr.send(payload);
+
+            function updateProfile(){
+                let data = JSON.stringify({
+                    userId: payload.userId,
+                    fullName: document.getElementById("name").value,
+                    email: document.getElementById("email"),
+                    bloodType: document.getElementById("blood_group"),
+                    lastDonationDate: document.getElementById("last_donation"),
+                    address : {
+                        street: document.getElementById("street").value,
+                        locality: document.getElementById("locality").value,
+                        city: document.getElementById("city").value,
+                        country: document.getElementById("country").value,
+                        pincode: document.getElementById("pin").value
+                    }
+                })
+                let xhr = new XMLHttpRequest();
+                let url = "/user/update"
+                xhr.open("POST", url, true);
+                // Set the request header i.e. which type of content you are sending
+                xhr.setRequestHeader("Content-Type", "application/json");
+                // Create a state change callback
+                xhr.onreadystatechange = function () {
+                console.log(xhr.status)
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var response = JSON.parse(xhr.response);
+                        console.log(response)
+                    }
+                };
+                xhr.send(data);
+            }
+        </script>
+
+
+       <br>
+
+
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" >
+
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>BloodMate - February 12, 2022 - Hack The League</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed by team </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Footer End -->
+
+        <a href="index.html" class="back-to-top" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="assets\Styles\jquery-3.4.1.min.js"></script>
+        <script src="assets\Styles\bootstrap.bundle.min.js"></script>
+        <script src="assets\Styles\min.js"></script>
+        <script src="assets\Styles\wow.min.js"></script>
+        <script src="assets\Styles\owl.carousel.min.js"></script>
+        <script src="assets\Styles\isotope.pkgd.min.js"></script>
+        <script src="assets\Styles\lightbox.min.js"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="assets\Styles\jqBootstrapValidation.min.js"></script>
+        <script src="assets\Styles\contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="assets\Styles\main.js"></script>
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="file:///home/reeva/Downloads/free-yoga-website-template/index.html"></a><a class="lb-next" href="file:///home/reeva/Downloads/free-yoga-website-template/index.html"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>

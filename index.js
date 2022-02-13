@@ -28,7 +28,11 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/home", (req, res) => {
-  res.sendFile(__dirname + "/public/hospital.html");
+  res.sendFile(__dirname + "/public/dashboard.html");
+});
+
+app.get("/profile", (req, res) => {
+  res.sendFile(__dirname + "/public/profile.html");
 });
 
 mongoose
